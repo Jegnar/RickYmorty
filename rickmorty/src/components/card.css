@@ -1,0 +1,65 @@
+/* Contenedor principal de la tarjeta */
+.card {
+    display: flex;
+    width: 90vw;
+    max-width: 600px;
+    height: 220px;
+    background-color: #3c3e44;
+    border-radius: 9px;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la imagen */
+.card img {
+    width: 230px;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contenedor de la información (derecha) */
+.info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título (Nombre del personaje) */
+.info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+/* Estado y Especie */
+.info h5 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+/* El puntito de color */
+.info h5::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #9e9e9e; /* Gris por defecto */
+}
+
+/* Colores del texto segun el estado */
+.alive { color: #55cc44; }
+.dead { color: #d63d2e; }
+.unknown { color: #9e9e9e; }
+
+/* Colores del puntito segun el estado */
+.alive::before { background-color: #55cc44; }
+.dead::before { background-color: #d63d2e; }
+.unknown::before { background-color: #9e9e9e; }
